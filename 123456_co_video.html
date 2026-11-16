@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tri Ân Người Lái Đò - Chào Mừng Ngày Nhà Giáo Việt Nam 20.11</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Playfair Display (cho tiêu đề tạp chí) & Inter (cho nội dung hiện đại) & Dancing Script (cho điểm nhấn cảm xúc) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Cấu hình Tailwind mở rộng bảng màu Pastel Blue -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pastel: {
+                            lightest: '#F4F9FD',
+                            bg: '#EBF5FB',
+                            soft: '#D6EAF8',
+                            medium: '#AED6F1',
+                            accent: '#5DADE2',
+                            deep: '#2E86C1',
+                            navy: '#1B4F72',
+                            dark: '#154360'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        script: ['Dancing Script', 'cursive']
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 30px -5px rgba(27, 79, 114, 0.08)',
+                        'polaroid': '0 12px 25px -5px rgba(27, 79, 114, 0.12), 0 4px 10px -2px rgba(27, 79, 114, 0.05)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Tùy chỉnh thanh cuộn tinh tế */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #EBF5FB;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #AED6F1;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5DADE2;
+        }
+
+        /* Hiệu ứng kính mờ cho Navbar */
+        .glass-nav {
+            background: rgba(235, 245, 251, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        /* Hiệu ứng thẻ Polaroid nghiêng nhẹ tự nhiên */
+        .polaroid-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .polaroid-card:hover {
+            transform: translateY(-8px) rotate(0deg) scale(1.02) !important;
+            z-index: 20;
+        }
+
+        /* Họa tiết nền chấm bi nhẹ nhàng */
+        .bg-dots {
+            background-image: radial-gradient(#AED6F1 1.2px, transparent 1.2px);
+            background-size: 24px 24px;
+        }
+
+        /* Animation trôi nhẹ cho các chi tiết trang trí */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+            animation: floatSlow 5s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-pastel-bg text-pastel-navy font-sans antialiased selection:bg-pastel-accent selection:text-white">
+
+    <!-- ==========================================
+         THANH ĐIỀU HƯỚNG CỐ ĐỊNH (STICKY NAVBAR)
+         ========================================== -->
+    <header class="sticky top-0 z-40 glass-nav border-b border-pastel-medium/50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <!-- Logo / Thương hiệu -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-pastel-accent to-pastel-navy flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-feather-pointed text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif font-bold text-lg md:text-xl text-pastel-navy tracking-tight block leading-none">Tri ân Thầy Cô 20-11</span>
+                        <span class="text-[11px] uppercase tracking-widest text-pastel-deep font-medium">TRƯỜNG THPT CHUYÊN QUANG TRUNG - A1K24</span>
+                    </div>
+                </a>
+
+                <!-- Menu Desktop -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#lich-su" class="text-sm font-medium text-pastel-navy hover:text-pastel-deep transition-colors py-2 border-b-2 border-transparent hover:border-pastel-accent">
+                        Lịch Sử Truyền Thống
+                    </a>
+                    <a href="#e-magazine" class="text-sm font-medium text-pastel-navy hover:text-pastel-deep transition-colors py-2 border-b-2 border-transparent hover:border-pastel-accent">
+                        E-Magazine
+                    </a>
+                    <a href="#thanh-xuan" class="text-sm font-medium text-pastel-navy hover:text-pastel-deep transition-colors py-2 border-b-2 border-transparent hover:border-pastel-accent">
+                        Thanh Xuân Có Thầy Cô
+                    </a>
+                </nav>
+
+                    <!-- Nút mở menu trên điện thoại -->
+                    <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl bg-white/80 text-pastel-navy border border-pastel-medium hover:bg-pastel-soft focus:outline-none" aria-label="Mở menu">
+                        <i class="fa-solid fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Mobile thả xuống -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 border-b border-pastel-medium px-4 pt-2 pb-5 space-y-2 shadow-lg">
+            <a href="#lich-su" class="mobile-link block px-4 py-2.5 rounded-xl text-base font-medium text-pastel-navy hover:bg-pastel-bg">
+                <i class="fa-solid fa-landmark w-6 text-pastel-accent"></i> Lịch Sử Truyền Thống
+            </a>
+            <a href="#e-magazine" class="mobile-link block px-4 py-2.5 rounded-xl text-base font-medium text-pastel-navy hover:bg-pastel-bg">
+                <i class="fa-solid fa-book-open w-6 text-pastel-accent"></i> E-Magazine Triết Lý
+            </a>
+            <a href="#thanh-xuan" class="mobile-link block px-4 py-2.5 rounded-xl text-base font-medium text-pastel-navy hover:bg-pastel-bg">
+                <i class="fa-solid fa-camera-retro w-6 text-pastel-accent"></i> Thanh Xuân Có Thầy Cô
+            </a>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         HERO BANNER
+         ========================================== -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-pastel-soft via-pastel-bg to-pastel-lightest pt-14 pb-20 md:pt-24 md:pb-28 border-b border-pastel-medium/40">
+        <!-- Các khối trang trí nền mềm mại -->
+        <div class="absolute top-10 left-10 w-64 h-64 bg-pastel-medium/30 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-pastel-accent/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute inset-0 bg-dots opacity-40 pointer-events-none"></div>
+
+        <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Huy hiệu kỷ niệm -->
+            <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/90 border border-pastel-medium shadow-sm mb-6 animate-float">
+                <span class="w-2 h-2 rounded-full bg-pastel-accent"></span>
+                <span class="text-xs sm:text-sm font-semibold tracking-wider uppercase text-pastel-deep">Ấn Phẩm Đặc Biệt • 20 Tháng 11</span>
+            </div>
+
+            <!-- Tiêu đề chính -->
+            <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-pastel-navy leading-tight mb-6">
+                Tri Ân Người Lái Đò
+                <span class="block text-2xl sm:text-3xl md:text-4xl font-normal italic text-pastel-deep mt-2">
+                    Chào Mừng Ngày Nhà Giáo Việt Nam 20.11
+                </span>
+            </h1>
+
+            <!-- Lời dẫn truyền cảm hứng -->
+            <p class="max-w-2xl mx-auto text-base sm:text-lg text-pastel-navy/85 leading-relaxed mb-10 font-normal">
+                "Có một nghề bụi phấn bám đầy tay, người ta bảo đó là nghề trong sạch nhất. Có một nghề không trồng cây vào đất, mà mang lại cho đời đầy trái ngọt hoa tươi." — Xin gửi trọn lòng biết ơn sâu sắc nhất đến những người thầy, người cô đã thắp sáng ngọn lửa tri thức và chắp cánh cho bao thế hệ học trò.
+            </p>
+
+            <!-- Các nút điều hướng nhanh -->
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#lich-su" class="px-6 py-3.5 rounded-2xl bg-pastel-navy hover:bg-pastel-dark text-white font-medium text-sm sm:text-base shadow-lg shadow-pastel-navy/20 transition-all transform hover:-translate-y-0.5 flex items-center">
+                    <span>Khám Phá Hành Trình</span>
+                    <i class="fa-solid fa-arrow-down ml-2 text-xs"></i>
+                </a>
+                <a href="#e-magazine" class="px-6 py-3.5 rounded-2xl bg-white hover:bg-pastel-soft text-pastel-navy border border-pastel-medium font-medium text-sm sm:text-base shadow-sm transition-all">
+                    <i class="fa-solid fa-book-open-reader text-pastel-accent mr-2"></i>Đọc E-Magazine
+                </a>
+                <a href="#thanh-xuan" class="px-6 py-3.5 rounded-2xl bg-white hover:bg-pastel-soft text-pastel-navy border border-pastel-medium font-medium text-sm sm:text-base shadow-sm transition-all">
+                    <i class="fa-regular fa-images text-pastel-accent mr-2"></i>Kỷ Yếu Thanh Xuân
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PHẦN 1: LỊCH SỬ TRUYỀN THỐNG
+         ========================================== -->
+    <section id="lich-su" class="py-20 md:py-28 bg-pastel-lightest relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Tiêu đề Phần 1 -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-pastel-accent block mb-2">Phần I • Cội Nguồn & Tự Hào</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-pastel-navy mb-4">Lịch Sử & Truyền Thống Ngày 20.11</h2>
+                <div class="w-20 h-1 bg-pastel-accent mx-auto rounded-full mb-5"></div>
+                <p class="text-pastel-navy/80 text-sm sm:text-base leading-relaxed">
+                    Hành trình ra đời của Ngày Nhà giáo Việt Nam gắn liền với tinh thần đoàn kết của các nhà giáo tiến bộ trên thế giới và truyền thống quý báu ngàn đời của dân tộc ta.
+                </p>
+            </div>
+
+            <!-- Bố cục 2 cột: Dòng thời gian lịch sử + Thẻ Ý nghĩa Tôn sư trọng đạo -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                
+                <!-- Cột Trái (7 cột): Dòng thời gian (Timeline) -->
+                <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-10 shadow-soft border border-pastel-soft">
+                    <h3 class="font-serif text-xl sm:text-2xl font-bold text-pastel-navy mb-8 flex items-center">
+                        <span class="w-9 h-9 rounded-xl bg-pastel-bg text-pastel-deep flex items-center justify-center mr-3 text-base">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </span>
+                        Những Dấu Mốc Lịch Sử Đáng Nhớ
+                    </h3>
+
+                    <div class="relative border-l-2 border-pastel-medium ml-4 space-y-8 pb-2">
+                        <!-- Mốc 1: 07/1946 -->
+                        <div class="relative pl-8 group">
+                            <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-pastel-accent group-hover:scale-125 transition-transform"></span>
+                            <div class="inline-block px-3 py-1 rounded-lg bg-pastel-bg text-pastel-deep font-bold text-xs mb-1.5">
+                                Tháng 07 / 1946
+                            </div>
+                            <h4 class="font-bold text-base sm:text-lg text-pastel-navy mb-1">Thành lập tổ chức FISE tại Paris</h4>
+                            <p class="text-sm text-pastel-navy/80 leading-relaxed">
+                                Tổ chức quốc tế các nhà giáo tiến bộ được thành lập tại thủ đô Paris (Pháp) với tên gọi viết tắt là <strong>FISE</strong> (Fédération Internationale Syndicale des Enseignants).
+                            </p>
+                        </div>
+
+                        <!-- Mốc 2: 1949 -->
+                        <div class="relative pl-8 group">
+                            <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-pastel-accent group-hover:scale-125 transition-transform"></span>
+                            <div class="inline-block px-3 py-1 rounded-lg bg-pastel-bg text-pastel-deep font-bold text-xs mb-1.5">
+                                Năm 1949
+                            </div>
+                            <h4 class="font-bold text-base sm:text-lg text-pastel-navy mb-1">Thông qua "Hiến chương các nhà giáo"</h4>
+                            <p class="text-sm text-pastel-navy/80 leading-relaxed">
+                                Tại hội nghị ở Warszawa (Ba Lan), FISE đã thông qua bản <strong>"Hiến chương các nhà giáo"</strong> gồm 15 chương, đấu tranh chống nền giáo dục tư sản, phong kiến, bảo vệ quyền lợi và đề cao vị thế cao quý của nghề dạy học.
+                            </p>
+                        </div>
+
+                        <!-- Mốc 3: 1953 -->
+                        <div class="relative pl-8 group">
+                            <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-pastel-accent group-hover:scale-125 transition-transform"></span>
+                            <div class="inline-block px-3 py-1 rounded-lg bg-pastel-bg text-pastel-deep font-bold text-xs mb-1.5">
+                                Năm 1953
+                            </div>
+                            <h4 class="font-bold text-base sm:text-lg text-pastel-navy mb-1">Công đoàn Giáo dục Việt Nam gia nhập FISE</h4>
+                            <p class="text-sm text-pastel-navy/80 leading-relaxed">
+                                Công đoàn Giáo dục Việt Nam chính thức trở thành thành viên của FISE, đánh dấu bước hội nhập và tiếng nói của nền giáo dục cách mạng Việt Nam trên trường quốc tế.
+                            </p>
+                        </div>
+
+                        <!-- Mốc 4: 20/11/1958 -->
+                        <div class="relative pl-8 group">
+                            <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-pastel-accent group-hover:scale-125 transition-transform"></span>
+                            <div class="inline-block px-3 py-1 rounded-lg bg-pastel-bg text-pastel-deep font-bold text-xs mb-1.5">
+                                Ngày 20 / 11 / 1958
+                            </div>
+                            <h4 class="font-bold text-base sm:text-lg text-pastel-navy mb-1">Lần đầu tiên tổ chức tại miền Bắc Việt Nam</h4>
+                            <p class="text-sm text-pastel-navy/80 leading-relaxed">
+                                Ngày <strong>"Quốc tế Hiến chương các nhà giáo"</strong> lần đầu tiên được tổ chức rộng khắp trên toàn miền Bắc nước ta, sau đó lan tỏa đến các vùng giải phóng ở miền Nam.
+                            </p>
+                        </div>
+
+                        <!-- Mốc 5: 28/09/1982 -->
+                        <div class="relative pl-8 group">
+                            <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-pastel-navy border-4 border-pastel-medium group-hover:scale-125 transition-transform"></span>
+                            <div class="inline-block px-3 py-1 rounded-lg bg-pastel-navy text-white font-bold text-xs mb-1.5">
+                                Ngày 28 / 09 / 1982
+                            </div>
+                            <h4 class="font-bold text-base sm:text-lg text-pastel-navy mb-1">Chính thức lấy ngày 20/11 là Ngày Nhà giáo Việt Nam</h4>
+                            <p class="text-sm text-pastel-navy/80 leading-relaxed">
+                                Hội đồng Bộ trưởng (nay là Chính phủ) đã ban hành <strong>Quyết định số 167-HĐBT</strong> chính thức lấy ngày 20 tháng 11 hằng năm làm <strong>Ngày Nhà giáo Việt Nam</strong>. Từ đó đến nay, 20/11 trở thành ngày hội lớn của toàn dân tôn vinh các thầy cô giáo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cột Phải (5 cột): Ý nghĩa truyền thống Tôn sư trọng đạo -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-gradient-to-br from-pastel-soft to-pastel-bg rounded-3xl p-8 border border-pastel-medium/60 shadow-soft relative overflow-hidden">
+                        <div class="absolute -right-6 -bottom-6 text-pastel-medium/30 text-9xl pointer-events-none">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <span class="inline-block px-3 py-1 rounded-full bg-white text-pastel-deep text-xs font-semibold mb-4 shadow-sm">
+                            Đạo Lý Ngàn Đời
+                        </span>
+                        <h3 class="font-serif text-2xl font-bold text-pastel-navy mb-4">
+                            Truyền Thống "Tôn Sư Trọng Đạo"
+                        </h3>
+                        <p class="text-sm sm:text-base text-pastel-navy/85 leading-relaxed mb-4">
+                            Từ bao đời nay, người Việt Nam luôn khắc ghi những lời răn dạy sâu sắc: <em>"Nhất tự vi sư, bán tự vi sư"</em> (Một chữ cũng là thầy, nửa chữ cũng là thầy) hay <em>"Muốn sang thì bắc cầu kiều, muốn con hay chữ thì yêu lấy thầy"</em>.
+                        </p>
+                        <p class="text-sm sm:text-base text-pastel-navy/85 leading-relaxed mb-6">
+                            Ngày 20/11 không chỉ là dịp để các thế hệ học trò bày tỏ lòng biết ơn, gửi những đóa hoa tươi thắm và lời chúc chân thành đến thầy cô, mà còn là dịp để toàn xã hội khẳng định vai trò then chốt của sự nghiệp giáo dục trong công cuộc dựng xây đất nước.
+                        </p>
+                        
+                        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-4 border border-white">
+                            <p class="font-script text-2xl text-pastel-deep text-center">
+                                "Người thầy giáo tốt là người vẻ vang nhất. Dù tên tuổi không đăng trên báo, không được thưởng huân chương, song những người thầy giáo tốt là những anh hùng vô danh."
+                            </p>
+                            <p class="text-xs text-center text-pastel-navy/70 font-semibold mt-2 uppercase tracking-wider">
+                                — Chủ tịch Hồ Chí Minh —
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Thẻ thống kê / Giá trị cốt lõi -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white rounded-2xl p-5 border border-pastel-soft shadow-sm text-center">
+                            <div class="w-10 h-10 rounded-full bg-pastel-bg text-pastel-accent flex items-center justify-center mx-auto mb-2">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <div class="font-serif font-bold text-lg text-pastel-navy">Tận Tâm</div>
+                            <div class="text-xs text-pastel-navy/70 mt-1">Hết lòng vì học sinh thân yêu</div>
+                        </div>
+                        <div class="bg-white rounded-2xl p-5 border border-pastel-soft shadow-sm text-center">
+                            <div class="w-10 h-10 rounded-full bg-pastel-bg text-pastel-accent flex items-center justify-center mx-auto mb-2">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+                            <div class="font-serif font-bold text-lg text-pastel-navy">Khai Phóng</div>
+                            <div class="text-xs text-pastel-navy/70 mt-1">Thắp sáng ngọn lửa tri thức</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PHẦN 2: E-MAGAZINE - TRIẾT LÝ NGHỀ GIÁO & NHỊP ĐẬP 20.11
+         ========================================== -->
+    <section id="e-magazine" class="py-20 md:py-28 bg-pastel-bg border-y border-pastel-medium/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Tiêu đề Phần 2 -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-pastel-accent block mb-2">Phần II • Ấn Phẩm Tạp Chí Điện Tử</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-pastel-navy">E-Magazine: Nghề Trồng Người
+                </div>
+                <p class="text-sm text-pastel-navy/75 max-w-md">
+                    Những lát cắt tinh tế về tâm hồn nhà giáo và những triết lý nhân văn sâu sắc nhân dịp kỷ niệm Ngày Nhà giáo Việt Nam 20.11.
+                </p>
+            </div>
+
+            <!-- Bố cục Magazine Grid: 5 khung ảnh triết lý -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 mb-12">
+                
+                <!-- Khung 1 (1.jpg) - Chiếm 4 cột -->
+                <article class="lg:col-span-4 bg-white rounded-3xl overflow-hidden shadow-soft border border-pastel-soft flex flex-col group">
+                    <div class="relative h-64 overflow-hidden bg-pastel-soft">
+                        <img src="1.jpg" 
+                             data-img-key="1.jpg"
+                             alt="Triết lý nghề giáo 1" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/800x600/D6EAF8/1B4F72?text=Anh+1+(1.jpg)%0ANguoi+Thay+Dan+Loi';"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 cursor-zoom-in lightbox-trigger"
+                             data-caption="Người thầy cầm tay, mở ra trí óc và chạm đến trái tim. — Triết lý về sự tận tâm dẫn lối.">
+                        <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-[11px] font-bold text-pastel-navy shadow-sm">
+                            Số 01 • Dẫn Lối
+                        </span>
+                        <button onclick="triggerSingleUpload('1.jpg')" class="absolute bottom-3 right-3 px-2.5 py-1.5 rounded-xl bg-pastel-navy/80 hover:bg-pastel-navy text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1.5" title="Thay ảnh 1.jpg">
+                            <i class="fa-solid fa-camera"></i> Đổi ảnh
+                        </button>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <i class="fa-solid fa-quote-left text-pastel-medium text-2xl mb-2 block"></i>
+                            <blockquote class="font-serif italic text-lg text-pastel-navy font-semibold leading-snug mb-3">
+                                "Người thầy cầm tay, mở ra trí óc và chạm đến trái tim."
+                            </blockquote>
+                        </div>
+                        <p class="text-xs sm:text-sm text-pastel-navy/75 pt-3 border-t border-pastel-bg">
+                            Triết lý về sự tận tâm dẫn lối, kiên nhẫn nâng đỡ từng bước đi đầu đời của học trò.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Khung 2 (2.jpg) - Chiếm 4 cột -->
+                <article class="lg:col-span-4 bg-white rounded-3xl overflow-hidden shadow-soft border border-pastel-soft flex flex-col group">
+                    <div class="relative h-64 overflow-hidden bg-pastel-soft">
+                        <img src="2.jpg" 
+                             data-img-key="2.jpg"
+                             alt="Triết lý nghề giáo 2" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/800x600/AED6F1/1B4F72?text=Anh+2+(2.jpg)%0ASu+Menh+Trong+Nguoi';"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 cursor-zoom-in lightbox-trigger"
+                             data-caption="Dưới ánh mặt trời, không có nghề nào cao quý hơn nghề dạy học. — Lời tôn vinh sứ mệnh trồng người.">
+                        <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-[11px] font-bold text-pastel-navy shadow-sm">
+                            Số 02 • Cao Quý
+                        </span>
+                        <button onclick="triggerSingleUpload('2.jpg')" class="absolute bottom-3 right-3 px-2.5 py-1.5 rounded-xl bg-pastel-navy/80 hover:bg-pastel-navy text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1.5" title="Thay ảnh 2.jpg">
+                            <i class="fa-solid fa-camera"></i> Đổi ảnh
+                        </button>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <i class="fa-solid fa-quote-left text-pastel-medium text-2xl mb-2 block"></i>
+                            <blockquote class="font-serif italic text-lg text-pastel-navy font-semibold leading-snug mb-3">
+                                "Dưới ánh mặt trời, không có nghề nào cao quý hơn nghề dạy học."
+                            </blockquote>
+                        </div>
+                        <p class="text-xs sm:text-sm text-pastel-navy/75 pt-3 border-t border-pastel-bg">
+                            Lời tôn vinh bất hủ dành cho sứ mệnh trồng người thầm lặng nhưng vô cùng vĩ đại.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Khung 3 (3.jpg) - Chiếm 4 cột -->
+                <article class="lg:col-span-4 bg-white rounded-3xl overflow-hidden shadow-soft border border-pastel-soft flex flex-col group">
+                    <div class="relative h-64 overflow-hidden bg-pastel-soft">
+                        <img src="3.jpg" 
+                             data-img-key="3.jpg"
+                             alt="Triết lý nghề giáo 3" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/800x600/D6EAF8/1B4F72?text=Anh+3+(3.jpg)%0ANgon+Nen+Soi+Sang';"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 cursor-zoom-in lightbox-trigger"
+                             data-caption="Một người thầy giỏi giống như ngọn nến - tự đốt cháy mình để soi sáng đường đi cho những người khác. — Sự hy sinh thầm lặng.">
+                        <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-[11px] font-bold text-pastel-navy shadow-sm">
+                            Số 03 • Cống Hiến
+                        </span>
+                        <button onclick="triggerSingleUpload('3.jpg')" class="absolute bottom-3 right-3 px-2.5 py-1.5 rounded-xl bg-pastel-navy/80 hover:bg-pastel-navy text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1.5" title="Thay ảnh 3.jpg">
+                            <i class="fa-solid fa-camera"></i> Đổi ảnh
+                        </button>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <i class="fa-solid fa-quote-left text-pastel-medium text-2xl mb-2 block"></i>
+                            <blockquote class="font-serif italic text-lg text-pastel-navy font-semibold leading-snug mb-3">
+                                "Một người thầy giỏi giống như ngọn nến - tự đốt cháy mình để soi sáng đường đi cho những người khác."
+                            </blockquote>
+                        </div>
+                        <p class="text-xs sm:text-sm text-pastel-navy/75 pt-3 border-t border-pastel-bg">
+                            Sự hy sinh thầm lặng qua từng trang giáo án, từng đêm thức trắng vì tương lai học trò.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Khung 4 (4.jpg) - Chiếm 6 cột (Nổi bật hàng dưới) -->
+                <article class="lg:col-span-6 bg-white rounded-3xl overflow-hidden shadow-soft border border-pastel-soft flex flex-col sm:flex-row group">
+                    <div class="relative sm:w-1/2 h-64 sm:h-auto overflow-hidden bg-pastel-soft">
+                        <img src="4.jpg" 
+                             data-img-key="4.jpg"
+                             alt="Thầy giáo tận tình giảng bài bên bàn học sinh" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/800x700/AED6F1/1B4F72?text=Anh+4+(4.jpg)%0AThap+Sang+Ngon+Lua';"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 cursor-zoom-in lightbox-trigger"
+                             data-caption="Giáo dục không phải là việc đổ đầy một chiếc bình, mà là thắp sáng một ngọn lửa. — Khoảnh khắc ân cần chỉ bảo từng nét chữ, bài toán.">
+                        <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-[11px] font-bold text-pastel-navy shadow-sm">
+                            Số 04 • Khai Sáng
+                        </span>
+                        <button onclick="triggerSingleUpload('4.jpg')" class="absolute bottom-3 right-3 px-2.5 py-1.5 rounded-xl bg-pastel-navy/80 hover:bg-pastel-navy text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1.5" title="Thay ảnh 4.jpg">
+                            <i class="fa-solid fa-camera"></i> Đổi ảnh
+                        </button>
+                    </div>
+                    <div class="p-6 sm:p-7 sm:w-1/2 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[11px] font-semibold uppercase tracking-wider text-pastel-accent">Góc Nhìn Lớp Học</span>
+                            <blockquote class="font-serif italic text-lg sm:text-xl text-pastel-navy font-semibold leading-snug mt-2 mb-3">
+                                "Giáo dục không phải là việc đổ đầy một chiếc bình, mà là thắp sáng một ngọn lửa."
+                            </blockquote>
+                        </div>
+                        <p class="text-xs sm:text-sm text-pastel-navy/80 leading-relaxed pt-3 border-t border-pastel-bg">
+                            Khoảnh khắc thầy ân cần cúi xuống bên bàn học, tỉ mỉ chỉ bảo từng nét chữ, từng lời giải bài toán — nơi tri thức được truyền trao bằng cả trái tim.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Khung 5 (5.jpg) - Chiếm 6 cột (Nổi bật hàng dưới) -->
+                <article class="lg:col-span-6 bg-white rounded-3xl overflow-hidden shadow-soft border border-pastel-soft flex flex-col sm:flex-row group">
+                    <div class="relative sm:w-1/2 h-64 sm:h-auto overflow-hidden bg-pastel-soft">
+                        <img src="5.jpg" 
+                             data-img-key="5.jpg"
+                             alt="Các cô giáo duyên dáng trong tà áo dài cùng bó hoa hướng dương" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/800x700/D6EAF8/1B4F72?text=Anh+5+(5.jpg)%0ANet+Dep+Nguoi+Gieo+Hat';"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 cursor-zoom-in lightbox-trigger"
+                             data-caption="Vẻ đẹp của người gieo hạt là nụ cười rạng rỡ khi thấy những mầm xanh vươn mình đón nắng. — Nét dịu dàng, rạng ngời của các cô giáo nhân ngày 20/11.">
+                        <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-[11px] font-bold text-pastel-navy shadow-sm">
+                            Số 05 • Rạng Ngời
+                        </span>
+                        <button onclick="triggerSingleUpload('5.jpg')" class="absolute bottom-3 right-3 px-2.5 py-1.5 rounded-xl bg-pastel-navy/80 hover:bg-pastel-navy text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1.5" title="Thay ảnh 5.jpg">
+                            <i class="fa-solid fa-camera"></i> Đổi ảnh
+                        </button>
+                    </div>
+                    <div class="p-6 sm:p-7 sm:w-1/2 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[11px] font-semibold uppercase tracking-wider text-pastel-accent">Sắc Hoa Tháng 11</span>
+                            <blockquote class="font-serif italic text-lg sm:text-xl text-pastel-navy font-semibold leading-snug mt-2 mb-3">
+                                "Vẻ đẹp của người gieo hạt là nụ cười rạng rỡ khi thấy những mầm xanh vươn mình đón nắng."
+                            </blockquote>
+                        </div>
+                        <p class="text-xs sm:text-sm text-pastel-navy/80 leading-relaxed pt-3 border-t border-pastel-bg">
+                            Nét dịu dàng, duyên dáng trong tà áo dài thướt tha cùng sắc vàng ấm áp của bó hoa hướng dương — biểu tượng cho niềm tin và tình yêu nghề rạng ngời của các cô giáo nhân ngày 20/11.
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- KHUNG VIDEO TRI ÂN (Chừa sẵn để thêm video sau + cho phép xem thử video từ máy) -->
+            <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-soft border-2 border-pastel-medium/70">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                    <div>
+                        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-pastel-bg text-pastel-deep text-xs font-bold mb-2">
+                            <i class="fa-solid fa-film"></i>
+                            <span>Góc Video Tri Ân</span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-pastel-navy">Thước Phim Kỷ Niệm & Lời Chúc 20.11</h3>
+                    </div>
+
+                    <!-- Các nút tương tác cho khung video -->
+                    <div class="flex flex-wrap items-center gap-2.5">
+
+                    </div>
+                </div>
+
+                <!-- Khung tỷ lệ 16:9 -->
+                <div id="video-container" class="relative w-full aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-pastel-bg via-pastel-soft to-pastel-medium/40 border-2 border-pastel-accent/60 flex flex-col items-center justify-center text-center group">
+                    <!-- Placeholder tinh tế khi chưa có video -->
+                    <div id="video-placeholder" class="hidden max-w-lg mx-auto flex flex-col items-center">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white text-pastel-accent shadow-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform cursor-pointer" onclick="document.getElementById('video-upload-input').click()">
+                            <i class="fa-solid fa-play text-2xl sm:text-3xl ml-1"></i>
+                        </div>
+                        <h4 class="font-serif text-xl font-bold text-pastel-navy mb-2">Không Gian Dành Cho Video Tri Ân</h4>
+                        <p class="text-xs sm:text-sm text-pastel-navy/80 leading-relaxed mb-4">
+                            Khung phát video chuẩn <strong>16:9</strong> đã sẵn sàng. Bạn có thể tải trực tiếp tệp video <code>.mp4</code> từ máy tính để xem thử ngay tại đây, hoặc dán liên kết YouTube của lớp/trường.
+                        </p>
+                        <div class="text-[11px] text-pastel-deep bg-white/80 px-3.5 py-1.5 rounded-lg border border-pastel-medium/50 font-mono">
+                            &lt;!-- Gợi ý code nhúng: thay thế khối placeholder này bằng thẻ &lt;video&gt; hoặc &lt;iframe&gt; --&gt;
+                        </div>
+                    </div>
+
+                    <!-- Trình phát Video cục bộ (Ẩn mặc định) -->
+                    <video id="local-video-player" controls preload="metadata" playsinline src="lalalal.mp4" class="w-full h-full object-contain bg-black rounded-xl"></video>
+
+                    <!-- Trình phát YouTube Iframe (Ẩn mặc định) -->
+                    <iframe id="youtube-video-player" class="hidden w-full h-full rounded-xl" src="" title="Video Tri Ân 20/11" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <!-- Hộp nhập link YouTube (Ẩn mặc định) -->
+                <div id="youtube-input-box" class="hidden mt-4 p-4 rounded-2xl bg-pastel-bg border border-pastel-medium flex flex-col sm:flex-row gap-3">
+                    <input type="text" id="youtube-url-input" placeholder="Dán đường dẫn YouTube tại đây (ví dụ: https://www.youtube.com/watch?v=...)" class="flex-1 px-4 py-2.5 rounded-xl bg-white border border-pastel-medium text-sm text-pastel-navy focus:outline-none focus:border-pastel-accent">
+                    <button id="apply-youtube-btn" class="px-5 py-2.5 rounded-xl bg-pastel-navy hover:bg-pastel-dark text-white text-sm font-medium transition-colors">
+                        Phát Video
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PHẦN 3: THANH XUÂN CÓ THẦY CÔ (8 ẢNH KỶ YẾU POLAROID)
+         ========================================== -->
+    <section id="thanh-xuan" class="py-20 md:py-28 bg-pastel-lightest relative overflow-hidden">
+        <!-- Họa tiết trang trí nền -->
+        <div class="absolute inset-0 bg-dots opacity-35 pointer-events-none"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Tiêu đề Phần 3 -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-pastel-accent block mb-2">Phần III • Lưu Bút & Kỷ Yếu</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-pastel-navy mb-4">Thanh Xuân Có Thầy Cô</h2>
+                <div class="w-20 h-1 bg-pastel-accent mx-auto rounded-full mb-5"></div>
+                <p class="text-pastel-navy/80 text-sm sm:text-base leading-relaxed">
+                    Tuổi học trò đẹp nhất không chỉ bởi những trang sách, mà bởi luôn có ánh mắt trìu mến và vòng tay dìu dắt của thầy cô trong từng khoảnh khắc trưởng thành.
+                </p>
+            </div>
+
+            <!-- Lưới 8 khung ảnh Polaroid nghệ thuật -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Ảnh 6 (6.jpg) -->
+                <div class="polaroid-card bg-white p-4 pb-6 rounded-2xl shadow-polaroid border border-pastel-soft -rotate-1 flex flex-col group">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-pastel-soft mb-4">
+                        <img src="6.jpg" 
+                             data-img-key="6.jpg"
+                             alt="Tập thể thầy cô và học sinh trên sân khấu lớn" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/800x600/D6EAF8/1B4F72?text=Anh+6+(6.jpg)%0AThanh+Xuan+Ruc+Ro';"
+                             class="w-full h-full object-cover cursor-zoom-in lightbox-trigger"
+                             data-caption="Thanh xuân rực rỡ khi có thầy cô luôn đồng hành trên mọi sân khấu lớn.">
+                        <button onclick="triggerSingleUpload('6.jpg')" class="absolute bottom-2 right-2 p-2 rounded-lg bg-pastel-navy/80 text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity" title="Đổi ảnh 6.jpg">
+                            <i class="fa-solid fa-camera"></i>
+                        </button>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between">
+                        <p class="text-sm text-pastel-navy font-medium leading-relaxed">
+                            "Thanh xuân rực rỡ khi có thầy cô luôn đồng hành trên mọi sân khấu lớn."
+                        </p>
+                        <div class="mt-3 pt-2 border-t border-pastel-bg flex justify-between items-center text-[11px] text-pastel-deep font-semibold">
+                            <span>#KhoảnhKhắc01</span>
+                            <span class="font-script text-base text-pastel-accent">Thanh xuân</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ảnh 7 (7.jpg) -->
+                <div class="polaroid-card bg-white p-4 pb-6 rounded-2xl shadow-polaroid border border-pastel-soft rotate-1 flex flex-col group">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-pastel-soft mb-4">
+                        <img src="7.jpg" 
+                             data-img-key="7.jpg"
+                             alt="Đêm lửa trại rực sáng tuổi trẻ" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/800x600/AED6F1/1B4F72?text=Anh+7+(7.jpg)%0ADem+Lua+Trai';"
+                             class="w-full h-full object-cover cursor-zoom-in lightbox-trigger"
+                             data-caption="Đêm lửa trại bùng cháy nhiệt huyết tuổi trẻ, sưởi ấm những ký ức không thể nào quên.">
+                        <button onclick="triggerSingleUpload('7.jpg')" class="absolute bottom-2 right-2 p-2 rounded-lg bg-pastel-navy/80 text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity" title="Đổi ảnh 7.jpg">
+                            <i class="fa-solid fa-camera"></i>
+                        </button>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between">
+                        <p class="text-sm text-pastel-navy font-medium leading-relaxed">
+                            "Đêm lửa trại bùng cháy nhiệt huyết tuổi trẻ, sưởi ấm những ký ức không thể nào quên."
+                        </p>
+                        <div class="mt-3 pt-2 border-t border-pastel-bg flex justify-between items-center text-[11px] text-pastel-deep font-semibold">
+                            <span>#KhoảnhKhắc02</span>
+                            <span class="font-script text-base text-pastel-accent">Nhiệt huyết</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ảnh 8 (8.jpg) -->
+                <div class="polaroid-card bg-white p-4 pb-6 rounded-2xl shadow-polaroid border border-pastel-soft -rotate-1 flex flex-col group">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-pastel-soft mb-4">
+                        <img src="8.jpg" 
+                             data-img-key="8.jpg"
+                             alt="Đội thi Samsung Solve for Tomorrow 2025" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/800x600/D6EAF8/1B4F72?text=Anh+8+(8.jpg)%0ASolve+For+Tomorrow+2025';"
+                             class="w-full h-full object-cover cursor-zoom-in lightbox-trigger"
+                             data-caption="Tự hào chinh phục đỉnh cao tri thức tại chung kết Samsung Solve for Tomorrow 2025.">
+                        <button onclick="triggerSingleUpload('8.jpg')" class="absolute bottom-2 right-2 p-2 rounded-lg bg-pastel-navy/80 text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity" title="Đổi ảnh 8.jpg">
+                            <i class="fa-solid fa-camera"></i>
+                        </button>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between">
+                        <p class="text-sm text-pastel-navy font-medium leading-relaxed">
+                            "Tự hào chinh phục đỉnh cao tri thức tại chung kết Samsung Solve for Tomorrow 2025."
+                        </p>
+                        <div class="mt-3 pt-2 border-t border-pastel-bg flex justify-between items-center text-[11px] text-pastel-deep font-semibold">
+                            <span>#KhoảnhKhắc03</span>
+                            <span class="font-script text-base text-pastel-accent">Khát vọng</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ảnh 9 (9.jpg) -->
+                <div class="polaroid-card bg-white p-4 pb-6 rounded-2xl shadow-polaroid border border-pastel-soft rotate-1 flex flex-col group">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-pastel-soft mb-4">
+                        <img src="9.jpg" 
+                             data-img-key="9.jpg"
+                             alt="Hiền tài là nguyên khí quốc gia" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/800x600/AED6F1/1B4F72?text=Anh+9+(9.jpg)%0AHien+Tai+Quoc+Gia';"
+                             class="w-full h-full object-cover cursor-zoom-in lightbox-trigger"
+                             data-caption="Hiền tài là nguyên khí quốc gia — Dấu ấn tự hào của bao thế hệ học trò dưới mái trường mến yêu.">
+                        <button onclick="triggerSingleUpload('9.jpg')" class="absolute bottom-2 right-2 p-2 rounded-lg bg-pastel-navy/80 text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity" title="Đổi ảnh 9.jpg">
+                            <i class="fa-solid fa-camera"></i>
+                        </button>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between">
+                        <p class="text-sm text-pastel-navy font-medium leading-relaxed">
+                            "Hiền tài là nguyên khí quốc gia — Dấu ấn tự hào của bao thế hệ học trò dưới mái trường mến yêu."
+                        </p>
+                        <div class="mt-3 pt-2 border-t border-pastel-bg flex justify-between items-center text-[11px] text-pastel-deep font-semibold">
+                            <span>#KhoảnhKhắc04</span>
+                            <span class="font-script text-base text-pastel-accent">Tự hào</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ảnh 10 (10.jpg) -->
+                <div class="polaroid-card bg-white p-4 pb-6 rounded-2xl shadow-polaroid border border-pastel-soft rotate-1 flex flex-col group">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-pastel-soft mb-4">
+                        <img src="10.jpg" 
+                             data-img-key="10.jpg"
+                             alt="Cô giáo áo dài đỏ ôm hoa cùng học sinh" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/800x600/D6EAF8/1B4F72?text=Anh+10+(10.jpg)%0ATa+Ao+Dai+Cua+Co';"
+                             class="w-full h-full object-cover cursor-zoom-in lightbox-trigger"
+                             data-caption="Tà áo dài thướt tha và nụ cười dịu hiền của cô là sắc màu đẹp nhất trong bức tranh tuổi học trò.">
+                        <button onclick="triggerSingleUpload('10.jpg')" class="absolute bottom-2 right-2 p-2 rounded-lg bg-pastel-navy/80 text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity" title="Đổi ảnh 10.jpg">
+                            <i class="fa-solid fa-camera"></i>
+                        </button>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between">
+                        <p class="text-sm text-pastel-navy font-medium leading-relaxed">
+                            "Tà áo dài thướt tha và nụ cười dịu hiền của cô là sắc màu đẹp nhất trong bức tranh tuổi học trò."
+                        </p>
+                        <div class="mt-3 pt-2 border-t border-pastel-bg flex justify-between items-center text-[11px] text-pastel-deep font-semibold">
+                            <span>#KhoảnhKhắc05</span>
+                            <span class="font-script text-base text-pastel-accent">Dịu hiền</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ảnh 11 (11.jpg) -->
+                <div class="polaroid-card bg-white p-4 pb-6 rounded-2xl shadow-polaroid border border-pastel-soft -rotate-1 flex flex-col group">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-pastel-soft mb-4">
+                        <img src="11.jpg" 
+                             data-img-key="11.jpg"
+                             alt="Thầy giáo bắt tay cười rạng rỡ với học sinh" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/800x600/AED6F1/1B4F72?text=Anh+11+(11.jpg)%0ACai+Bat+Tay+Am+Ap';"
+                             class="w-full h-full object-cover cursor-zoom-in lightbox-trigger"
+                             data-caption="Cái bắt tay ấm áp và nụ cười rạng rỡ thay cho ngàn lời cảm ơn gửi đến thầy.">
+                        <button onclick="triggerSingleUpload('11.jpg')" class="absolute bottom-2 right-2 p-2 rounded-lg bg-pastel-navy/80 text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity" title="Đổi ảnh 11.jpg">
+                            <i class="fa-solid fa-camera"></i>
+                        </button>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between">
+                        <p class="text-sm text-pastel-navy font-medium leading-relaxed">
+                            "Cái bắt tay ấm áp và nụ cười rạng rỡ thay cho ngàn lời cảm ơn gửi đến thầy."
+                        </p>
+                        <div class="mt-3 pt-2 border-t border-pastel-bg flex justify-between items-center text-[11px] text-pastel-deep font-semibold">
+                            <span>#KhoảnhKhắc06</span>
+                            <span class="font-script text-base text-pastel-accent">Ấm áp</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ảnh 12 (12.jpg) -->
+                <div class="polaroid-card bg-white p-4 pb-6 rounded-2xl shadow-polaroid border border-pastel-soft rotate-1 flex flex-col group">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-pastel-soft mb-4">
+                        <img src="12.jpg" 
+                             data-img-key="12.jpg"
+                             alt="Thầy trao bằng khen và phần thưởng cho học sinh" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/800x600/D6EAF8/1B4F72?text=Anh+12+(12.jpg)%0AKhoanh+Khac+Vinh+Danh';"
+                             class="w-full h-full object-cover cursor-zoom-in lightbox-trigger"
+                             data-caption="Khoảnh khắc vinh danh đầy tự hào — Trái ngọt từ sự dìu dắt tận tụy của thầy.">
+                        <button onclick="triggerSingleUpload('12.jpg')" class="absolute bottom-2 right-2 p-2 rounded-lg bg-pastel-navy/80 text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity" title="Đổi ảnh 12.jpg">
+                            <i class="fa-solid fa-camera"></i>
+                        </button>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between">
+                        <p class="text-sm text-pastel-navy font-medium leading-relaxed">
+                            "Khoảnh khắc vinh danh đầy tự hào — Trái ngọt từ sự dìu dắt tận tụy của thầy."
+                        </p>
+                        <div class="mt-3 pt-2 border-t border-pastel-bg flex justify-between items-center text-[11px] text-pastel-deep font-semibold">
+                            <span>#KhoảnhKhắc07</span>
+                            <span class="font-script text-base text-pastel-accent">Trái ngọt</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ảnh 13 (13.jpg) -->
+                <div class="polaroid-card bg-white p-4 pb-6 rounded-2xl shadow-polaroid border border-pastel-soft -rotate-1 flex flex-col group">
+                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-pastel-soft mb-4">
+                        <img src="13.jpg" 
+                             data-img-key="13.jpg"
+                             alt="Các thầy cô trường THPT Chuyên Quang Trung" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/800x600/AED6F1/1B4F72?text=Anh+13+(13.jpg)%0ATHPT+Chuyen+Quang+Trung';"
+                             class="w-full h-full object-cover cursor-zoom-in lightbox-trigger"
+                             data-caption="Những người lái đò tận tâm của mái trường THPT Chuyên Quang Trung — Điểm tựa vững chắc cho ước mơ bay xa.">
+                        <button onclick="triggerSingleUpload('13.jpg')" class="absolute bottom-2 right-2 p-2 rounded-lg bg-pastel-navy/80 text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity" title="Đổi ảnh 13.jpg">
+                            <i class="fa-solid fa-camera"></i>
+                        </button>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between">
+                        <p class="text-sm text-pastel-navy font-medium leading-relaxed">
+                            "Những người lái đò tận tâm của mái trường THPT Chuyên Quang Trung — Điểm tựa vững chắc cho ước mơ bay xa."
+                        </p>
+                        <div class="mt-3 pt-2 border-t border-pastel-bg flex justify-between items-center text-[11px] text-pastel-deep font-semibold">
+                            <span>#KhoảnhKhắc08</span>
+                            <span class="font-script text-base text-pastel-accent">Điểm tựa</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER TRI ÂN TINH TẾ
+         ========================================== -->
+    <footer class="bg-pastel-navy text-white pt-16 pb-10 relative overflow-hidden">
+        <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-pastel-soft via-pastel-accent to-pastel-medium"></div>
+        
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="w-12 h-12 rounded-2xl bg-white/10 text-pastel-medium flex items-center justify-center mx-auto mb-5">
+                <i class="fa-solid fa-heart text-xl"></i>
+            </div>
+            
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-3">
+                Kính Chúc Quý Thầy Cô Luôn Mạnh Khỏe & Hạnh Phúc
+            </h3>
+            <p class="font-script text-2xl sm:text-3xl text-pastel-medium mb-6">
+                "Cảm ơn thầy cô vì đã là ngọn hải đăng soi sáng hành trình trưởng thành của chúng em."
+            </p>
+            
+            <div class="flex justify-center space-x-6 text-sm text-pastel-soft/80 mb-8">
+                <a href="#lich-su" class="hover:text-white transition-colors">Lịch Sử 20.11</a>
+                <span>•</span>
+                <a href="#e-magazine" class="hover:text-white transition-colors">E-Magazine</a>
+                <span>•</span>
+                <a href="#thanh-xuan" class="hover:text-white transition-colors">Thanh Xuân Có Thầy Cô</a>
+            </div>
+
+            <div class="pt-6 border-t border-white/10 text-xs text-pastel-soft/60 flex flex-col sm:flex-row justify-between items-center gap-2">
+                <p>Ấn phẩm điện tử chào mừng Ngày Nhà giáo Việt Nam 20/11.</p>
+                <p>Thiết kế với tất cả lòng biết ơn & sự trân trọng.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         LIGHTBOX XEM ẢNH PHÓNG TO
+         ========================================== -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-pastel-dark/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-8 transition-opacity">
+        <button id="close-lightbox" class="absolute top-5 right-5 w-11 h-11 rounded-full bg-white/15 hover:bg-white/30 text-white flex items-center justify-center text-xl transition-colors focus:outline-none" aria-label="Đóng">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="max-w-4xl w-full bg-white rounded-3xl overflow-hidden shadow-2xl border border-pastel-medium/40 animate-fadeIn">
+            <div class="bg-pastel-dark flex items-center justify-center max-h-[72vh] overflow-hidden">
+                <img id="lightbox-img" src="" alt="Phóng to ảnh" class="max-h-[72vh] w-auto object-contain">
+            </div>
+            <div class="p-5 sm:p-6 bg-white flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <p id="lightbox-caption" class="font-serif italic text-base sm:text-lg text-pastel-navy font-medium"></p>
+                <span class="text-xs font-semibold uppercase tracking-wider text-pastel-accent whitespace-nowrap">
+                    Kỷ Niệm 20.11
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Input ẩn hỗ trợ thay từng ảnh riêng lẻ -->
+    <input type="file" id="single-upload-input" accept="image/*" class="hidden">
+
+    <!-- ==========================================
+         THÔNG BÁO TOAST NHẸ NHÀNG (THAY CHO ALERT)
+         ========================================== -->
+    <div id="toast-notification" class="fixed bottom-5 right-5 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="bg-pastel-navy text-white px-5 py-3.5 rounded-2xl shadow-xl border border-pastel-accent/40 flex items-center space-x-3 text-sm">
+            <i class="fa-solid fa-circle-check text-pastel-medium text-lg"></i>
+            <span id="toast-message">Đã cập nhật hình ảnh thành công!</span>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         JAVASCRIPT TƯƠNG TÁC
+         ========================================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Điều khiển Menu Mobile
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // 2. Hệ thống thông báo Toast tinh tế
+            const toast = document.getElementById('toast-notification');
+            const toastMsg = document.getElementById('toast-message');
+            let toastTimeout;
+
+            function showToast(message) {
+                toastMsg.textContent = message;
+                toast.classList.remove('translate-y-24', 'opacity-0');
+                clearTimeout(toastTimeout);
+                toastTimeout = setTimeout(() => {
+                    toast.classList.add('translate-y-24', 'opacity-0');
+                }, 3500);
+            }
+
+            // 3. Lightbox xem ảnh phóng to
+            const lightboxModal = document.getElementById('lightbox-modal');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            const closeLightbox = document.getElementById('close-lightbox');
+
+            document.querySelectorAll('.lightbox-trigger').forEach(img => {
+                img.addEventListener('click', () => {
+                    lightboxImg.src = img.src;
+                    lightboxCaption.textContent = img.getAttribute('data-caption') || img.alt;
+                    lightboxModal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            function hideLightbox() {
+                lightboxModal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+
+            closeLightbox.addEventListener('click', hideLightbox);
+            lightboxModal.addEventListener('click', (e) => {
+                if (e.target === lightboxModal) hideLightbox();
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !lightboxModal.classList.contains('hidden')) {
+                    hideLightbox();
+                }
+            });
+
+            // 4. Tính năng nạp ảnh từ máy tính (Hàng loạt hoặc từng ảnh)
+            const bulkUploadInput = document.getElementById('bulk-upload-input');
+            const singleUploadInput = document.getElementById('single-upload-input');
+            let targetImgKey = null;
+
+            // Nạp hàng loạt ảnh khớp theo tên file (1.jpg -> 13.jpg) hoặc theo thứ tự
+            bulkUploadInput.addEventListener('change', (e) => {
+                const files = Array.from(e.target.files);
+                if (!files.length) return;
+
+                let matchedCount = 0;
+                const allManagedImages = document.querySelectorAll('img[data-img-key]');
+
+                files.forEach(file => {
+                    const fileName = file.name.toLowerCase();
+                    // Tìm thẻ img có data-img-key trùng tên file (ví dụ 4.jpg, 13.jpg)
+                    const exactMatch = Array.from(allManagedImages).find(
+                        img => img.getAttribute('data-img-key').toLowerCase() === fileName
+                    );
+
+                    if (exactMatch) {
+                        const objectUrl = URL.createObjectURL(file);
+                        exactMatch.src = objectUrl;
+                        matchedCount++;
+                    }
+                });
+
+                // Nếu người dùng chọn ảnh không đặt tên đúng 1.jpg..13.jpg, gán lần lượt vào các khung
+                if (matchedCount === 0) {
+                    files.slice(0, allManagedImages.length).forEach((file, idx) => {
+                        allManagedImages[idx].src = URL.createObjectURL(file);
+                        matchedCount++;
+                    });
+                }
+
+                showToast(`Đã nạp thành công ${matchedCount} bức ảnh vào trang web!`);
+                bulkUploadInput.value = '';
+            });
+
+            // Hàm mở hộp thoại đổi 1 ảnh cụ thể
+            window.triggerSingleUpload = function(imgKey) {
+                targetImgKey = imgKey;
+                singleUploadInput.click();
+            };
+
+            singleUploadInput.addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (!file || !targetImgKey) return;
+
+                const targetImg = document.querySelector(`img[data-img-key="${targetImgKey}"]`);
+                if (targetImg) {
+                    targetImg.src = URL.createObjectURL(file);
+                    showToast(`Đã cập nhật ảnh cho khung ${targetImgKey}!`);
+                }
+                singleUploadInput.value = '';
+            });
+
+            // 5. Tính năng xem thử Video cục bộ hoặc nhúng YouTube
+            const videoUploadInput = document.getElementById('video-upload-input');
+            const videoPlaceholder = document.getElementById('video-placeholder');
+            const localVideoPlayer = document.getElementById('local-video-player');
+            const youtubeVideoPlayer = document.getElementById('youtube-video-player');
+            const videoContainer = document.getElementById('video-container');
+
+            const toggleEmbedBtn = document.getElementById('toggle-embed-modal');
+            const youtubeInputBox = document.getElementById('youtube-input-box');
+            const youtubeUrlInput = document.getElementById('youtube-url-input');
+            const applyYoutubeBtn = document.getElementById('apply-youtube-btn');
+
+            // Chọn video từ máy tính
+            videoUploadInput.addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+
+                const videoUrl = URL.createObjectURL(file);
+                youtubeVideoPlayer.classList.add('hidden');
+                youtubeVideoPlayer.src = '';
+                videoPlaceholder.classList.add('hidden');
+
+                localVideoPlayer.src = videoUrl;
+                localVideoPlayer.classList.remove('hidden');
+                videoContainer.classList.remove('border-dashed', 'p-6');
+                localVideoPlayer.play();
+
+                showToast('Đã tải video tri ân lên trình phát!');
+            });
+
+            // Bật/tắt thanh nhập link YouTube
+            toggleEmbedBtn.addEventListener('click', () => {
+                youtubeInputBox.classList.toggle('hidden');
+                if (!youtubeInputBox.classList.contains('hidden')) {
+                    youtubeUrlInput.focus();
+                }
+            });
+
+            // Xử lý chuyển đổi link YouTube sang dạng Embed
+            applyYoutubeBtn.addEventListener('click', () => {
+                const url = youtubeUrlInput.value.trim();
+                if (!url) {
+                    showToast('Vui lòng dán đường dẫn YouTube hợp lệ.');
+                    return;
+                }
+
+                let videoId = '';
+                const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+                const match = url.match(regExp);
+
+                if (match && match[2].length === 11) {
+                    videoId = match[2];
+                    localVideoPlayer.pause();
+                    localVideoPlayer.classList.add('hidden');
+                    videoPlaceholder.classList.add('hidden');
+
+                    youtubeVideoPlayer.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                    youtubeVideoPlayer.classList.remove('hidden');
+                    videoContainer.classList.remove('border-dashed', 'p-6');
+                    youtubeInputBox.classList.add('hidden');
+
+                    showToast('Đã nhúng video YouTube thành công!');
+                } else {
+                    showToast('Đường dẫn YouTube chưa đúng định dạng.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
